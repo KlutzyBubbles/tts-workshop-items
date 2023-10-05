@@ -1,0 +1,700 @@
+{
+  "SaveName": "v1",
+  "EpochTime": 1696490580,
+  "Date": "10/5/2023 6:23:00 PM",
+  "VersionNumber": "v13.2.2",
+  "GameMode": "v0.2",
+  "GameType": "",
+  "GameComplexity": "",
+  "Tags": [],
+  "Gravity": 0.5,
+  "PlayArea": 0.5,
+  "Table": "Table_RPG",
+  "Sky": "Sky_Museum",
+  "Note": "",
+  "TabStates": {
+    "0": {
+      "title": "Rules",
+      "body": "",
+      "color": "Grey",
+      "visibleColor": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5
+      },
+      "id": 0
+    },
+    "1": {
+      "title": "White",
+      "body": "",
+      "color": "White",
+      "visibleColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "id": 1
+    },
+    "2": {
+      "title": "Brown",
+      "body": "",
+      "color": "Brown",
+      "visibleColor": {
+        "r": 0.443,
+        "g": 0.231,
+        "b": 0.09
+      },
+      "id": 2
+    },
+    "3": {
+      "title": "Red",
+      "body": "",
+      "color": "Red",
+      "visibleColor": {
+        "r": 0.856,
+        "g": 0.1,
+        "b": 0.094
+      },
+      "id": 3
+    },
+    "4": {
+      "title": "Orange",
+      "body": "",
+      "color": "Orange",
+      "visibleColor": {
+        "r": 0.956,
+        "g": 0.392,
+        "b": 0.113
+      },
+      "id": 4
+    },
+    "5": {
+      "title": "Yellow",
+      "body": "",
+      "color": "Yellow",
+      "visibleColor": {
+        "r": 0.905,
+        "g": 0.898,
+        "b": 0.172
+      },
+      "id": 5
+    },
+    "6": {
+      "title": "Green",
+      "body": "",
+      "color": "Green",
+      "visibleColor": {
+        "r": 0.192,
+        "g": 0.701,
+        "b": 0.168
+      },
+      "id": 6
+    },
+    "7": {
+      "title": "Blue",
+      "body": "",
+      "color": "Blue",
+      "visibleColor": {
+        "r": 0.118,
+        "g": 0.53,
+        "b": 1.0
+      },
+      "id": 7
+    },
+    "8": {
+      "title": "Teal",
+      "body": "",
+      "color": "Teal",
+      "visibleColor": {
+        "r": 0.129,
+        "g": 0.694,
+        "b": 0.607
+      },
+      "id": 8
+    },
+    "9": {
+      "title": "Purple",
+      "body": "",
+      "color": "Purple",
+      "visibleColor": {
+        "r": 0.627,
+        "g": 0.125,
+        "b": 0.941
+      },
+      "id": 9
+    },
+    "10": {
+      "title": "Pink",
+      "body": "",
+      "color": "Pink",
+      "visibleColor": {
+        "r": 0.96,
+        "g": 0.439,
+        "b": 0.807
+      },
+      "id": 10
+    },
+    "11": {
+      "title": "Black",
+      "body": "",
+      "color": "Black",
+      "visibleColor": {
+        "r": 0.25,
+        "g": 0.25,
+        "b": 0.25
+      },
+      "id": 11
+    }
+  },
+  "Grid": {
+    "Type": 0,
+    "Lines": false,
+    "Color": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0
+    },
+    "Opacity": 0.75,
+    "ThickLines": false,
+    "Snapping": false,
+    "Offset": false,
+    "BothSnapping": false,
+    "xSize": 2.0,
+    "ySize": 2.0,
+    "PosOffset": {
+      "x": 0.0,
+      "y": 1.0,
+      "z": 0.0
+    }
+  },
+  "Lighting": {
+    "LightIntensity": 0.54,
+    "LightColor": {
+      "r": 1.0,
+      "g": 0.9804,
+      "b": 0.8902
+    },
+    "AmbientIntensity": 1.3,
+    "AmbientType": 0,
+    "AmbientSkyColor": {
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.5
+    },
+    "AmbientEquatorColor": {
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.5
+    },
+    "AmbientGroundColor": {
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.5
+    },
+    "ReflectionIntensity": 1.0,
+    "LutIndex": 0,
+    "LutContribution": 1.0
+  },
+  "Hands": {
+    "Enable": true,
+    "DisableUnused": false,
+    "Hiding": 0
+  },
+  "ComponentTags": {
+    "labels": []
+  },
+  "Turns": {
+    "Enable": false,
+    "Type": 0,
+    "TurnOrder": [],
+    "Reverse": false,
+    "SkipEmpty": false,
+    "DisableInteractions": false,
+    "PassTurns": true,
+    "TurnColor": ""
+  },
+  "DecalPallet": [],
+  "LuaScript": "function onLoad()\n    --[[ print('onLoad!') --]]\nend\n\n--[[ The onUpdate event is called once per frame. --]]\nfunction onUpdate()\n    --[[ print('onUpdate loop!') --]]\nend\n\nfunction GetSetting(var, default)\n\tif not (var and type(var)==\"string\") then return default end -- No var, return default\n\t\n\tif (not SettingsObject) or (SettingsObject==nil) then\n\t\tfor _,obj in pairs(getAllObjects()) do\n\t\t\tif obj.getLock() and obj.getName()==\"Settings\" and obj.getVar(\"getSetting\") and not (obj==nil) then\n\t\t\t\tSettingsObject = obj\n\t\t\t\tbreak\n\t\t\tend\n\t\tend\n\t\t\n\t\tif (not SettingsObject) or (SettingsObject==nil) then\n\t\t\treturn default -- No settings object, return default\n\t\tend\n\tend\n\t\n\tlocal value = SettingsObject.Call(\"getSetting\", {index=var})\n\tif value==nil then return default end -- Unset, return default\n\t\n\treturn value -- Return value\nend",
+  "LuaScriptState": "",
+  "XmlUI": "<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->",
+  "ObjectStates": [
+    {
+      "GUID": "541c2a",
+      "Name": "HandTrigger",
+      "Transform": {
+        "posX": -15.1107731,
+        "posY": 4.81034231,
+        "posZ": -20.1076221,
+        "rotX": 0.0,
+        "rotY": 0.0,
+        "rotZ": 0.0,
+        "scaleX": 11.7719851,
+        "scaleY": 9.174497,
+        "scaleZ": 4.871238
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.856,
+        "g": 0.09999997,
+        "b": 0.09399996,
+        "a": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "FogColor": "Red",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "0baeca",
+      "Name": "HandTrigger",
+      "Transform": {
+        "posX": -30.2150211,
+        "posY": 4.81034231,
+        "posZ": 10.17524,
+        "rotX": 0.0,
+        "rotY": 90.0,
+        "rotZ": 0.0,
+        "scaleX": 11.6554289,
+        "scaleY": 9.174497,
+        "scaleZ": 4.91995144
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.905,
+        "g": 0.898,
+        "b": 0.171999961,
+        "a": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "FogColor": "Yellow",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "60beaa",
+      "Name": "HandTrigger",
+      "Transform": {
+        "posX": 30.2511711,
+        "posY": 4.81034231,
+        "posZ": 9.59069252,
+        "rotX": 0.0,
+        "rotY": 270.0,
+        "rotZ": 0.0,
+        "scaleX": 11.6554213,
+        "scaleY": 9.174497,
+        "scaleZ": 4.91995144
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.627,
+        "g": 0.124999978,
+        "b": 0.941,
+        "a": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "FogColor": "Purple",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "3008ee",
+      "Name": "HandTrigger",
+      "Transform": {
+        "posX": 15.4749184,
+        "posY": 4.81034231,
+        "posZ": 19.8365288,
+        "rotX": 0.0,
+        "rotY": 179.8,
+        "rotZ": 0.0,
+        "scaleX": 11.7719746,
+        "scaleY": 9.174497,
+        "scaleZ": 4.87124
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.117999978,
+        "g": 0.53,
+        "b": 1.0,
+        "a": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "FogColor": "Blue",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "6eb2d4",
+      "Name": "HandTrigger",
+      "Transform": {
+        "posX": 15.1961212,
+        "posY": 4.81034231,
+        "posZ": -20.1400986,
+        "rotX": 0.0,
+        "rotY": 0.0,
+        "rotZ": 0.0,
+        "scaleX": 11.7719707,
+        "scaleY": 9.174499,
+        "scaleZ": 4.871238
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "FogColor": "White",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "afdbbe",
+      "Name": "HandTrigger",
+      "Transform": {
+        "posX": -15.1927719,
+        "posY": 4.81034231,
+        "posZ": 19.787817,
+        "rotX": 0.0,
+        "rotY": 180.0,
+        "rotZ": 0.0,
+        "scaleX": 11.7719707,
+        "scaleY": 9.174497,
+        "scaleZ": 4.871238
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.191999972,
+        "g": 0.701,
+        "b": 0.167999953,
+        "a": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "FogColor": "Green",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "e5a1b6",
+      "Name": "HandTrigger",
+      "Transform": {
+        "posX": 30.1035728,
+        "posY": 4.81034231,
+        "posZ": -8.449126,
+        "rotX": 0.0,
+        "rotY": 270.0,
+        "rotZ": 0.0,
+        "scaleX": 11.6554184,
+        "scaleY": 9.174497,
+        "scaleZ": 4.91995144
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.96,
+        "g": 0.438999981,
+        "b": 0.807,
+        "a": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "FogColor": "Pink",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "3f631b",
+      "Name": "HandTrigger",
+      "Transform": {
+        "posX": -30.247818,
+        "posY": 4.81034231,
+        "posZ": -8.822588,
+        "rotX": 0.0,
+        "rotY": 90.0,
+        "rotZ": 0.0,
+        "scaleX": 11.6554317,
+        "scaleY": 9.174497,
+        "scaleZ": 4.91995144
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.9559999,
+        "g": 0.39199996,
+        "b": 0.112999953,
+        "a": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "FogColor": "Orange",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "edd05b",
+      "Name": "Custom_Token",
+      "Transform": {
+        "posX": -5.94311859E-06,
+        "posY": 1.06000888,
+        "posZ": -3.52796633E-07,
+        "rotX": -6.112541E-07,
+        "rotY": 180.000015,
+        "rotZ": -3.88373655E-06,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Settings",
+      "Description": "Settings Menu",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomImage": {
+        "ImageURL": "https://raw.githubusercontent.com/KlutzyBubbles/tts-workshop-items/main/SettingsMenu/TileBackground.png",
+        "ImageSecondaryURL": "",
+        "ImageScalar": 1.0,
+        "WidthScale": 0.0,
+        "CustomToken": {
+          "Thickness": 0.2,
+          "MergeDistancePixels": 15.0,
+          "StandUp": false,
+          "Stackable": false
+        }
+      },
+      "LuaScript": "\r\nMenu = {\r\n\tMenu1 = {\r\n\t\t{\r\n\t\t\tLabel = \"Boolean Example\",\r\n\t\t\tTooltip = \"Boolean Tooltip\",\r\n\t\t\tSettingName = \"Menu1.BooleanExample\",\r\n\t\t\tDefault = true,\r\n\t\t\tType = \"boolean\",\r\n\t\t\tOnSet = function(newVal)\r\n\t\t\t\tprint((\"Boolean %s:%s\"):format(tostring(newVal), tostring(oldVal)))\r\n\t\t\tend,\r\n\t\t},\r\n\t\t{\r\n\t\t\tLabel = \"Int Example\",\r\n\t\t\tTooltip = \"Int Tooltip\",\r\n\t\t\tSettingName = \"Menu1.IntExample\",\r\n\t\t\tDefault = 1,\r\n\t\t\tType = \"int\",\r\n\t\t\tOnSet = function(newVal, oldVal)\r\n\t\t\t\tprint((\"Int %s:%s\"):format(tostring(newVal), tostring(oldVal)))\r\n\t\t\tend,\r\n\t\t},\r\n\t\t{\r\n\t\t\tLabel = \"Float Example\",\r\n\t\t\tTooltip = \"Float Tooltip\",\r\n\t\t\tSettingName = \"Menu1.FloatExample\",\r\n\t\t\tDefault = 1.0,\r\n\t\t\tType = \"float\",\r\n\t\t\tOnSet = function(newVal, oldVal)\r\n\t\t\t\tprint((\"Int %s:%s\"):format(tostring(newVal), tostring(oldVal)))\r\n\t\t\tend,\r\n\t\t},\r\n\t\t{\r\n\t\t\tLabel = \"String Example\",\r\n\t\t\tTooltip = \"String Tooltip\",\r\n\t\t\tSettingName = \"Menu1.StringExample\",\r\n\t\t\tDefault = \"string\",\r\n\t\t\tType = \"string\",\r\n\t\t\tOnSet = function(newVal, oldVal)\r\n\t\t\t\tprint((\"String %s:%s\"):format(tostring(newVal), tostring(oldVal)))\r\n\t\t\tend,\r\n\t\t},\r\n\t\t{\r\n\t\t\tLabel = \"Button Example\",\r\n\t\t\tTooltip = \"Button Tooltip\",\r\n\t\t\tSettingName = \"Menu1.ButtonExample\",\r\n\t\t\tType = \"anything\",\r\n\t\t\tOnSet = function()\r\n\t\t\t\tprint(\"Button\")\r\n\t\t\tend,\r\n\t\t},\r\n\t},\r\n}\r\n\r\n--- Options ---\r\n---------------\r\n\r\nListTitle = \"Settings\"\r\nItemsPerPage = 10\r\nUseBigSteppers = false\r\n\r\n\r\n--- Lang ---\r\n------------\r\n\r\nLang = {\r\n\tNoPermission = \"You can't do this.\",\r\n\tNoButtonRef = \"Something went wrong! (Button reference is missing)\",\r\n\tBack = \"Back\",\r\n\tMenu = \"Main Menu\"\r\n}\r\n\r\n\r\n--- Setup ---\r\n-------------\r\n\r\nSettings = {}\r\n\r\nfunction processSettings(tbl) -- Applies default values\r\n\tfor k,v in pairs(tbl) do\r\n\t\tif type(v)==\"table\" then\r\n\t\t\tif v.SettingName then -- It's a setting\r\n\t\t\t\tSettings[v.SettingName] = Settings[v.SettingName] or v.Default\r\n\t\t\telse -- It's a category\r\n\t\t\t\tprocessSettings(v)\r\n\t\t\tend\r\n\t\tend\r\n\tend\r\nend\r\nprocessSettings(Menu)\r\n\r\n-- Save --\r\n----------\r\n\r\nfunction onSave()\r\n\tlocal data = JSON.encode(Settings)\r\n\tself.script_state = data\r\nend\r\nfunction onLoad(saveData)\r\n\t-- Load Data\r\n\tif saveData then\r\n\t\tlocal decoded = JSON.decode(saveData)\r\n\t\t\r\n\t\t-- Apply settings if they exist\r\n\t\tif decoded then\r\n\t\t\tfor k,v in pairs(decoded) do\r\n\t\t\t\tif Settings[k]~=nil then\r\n\t\t\t\t\tSettings[k] = v\r\n\t\t\t\tend\r\n\t\t\tend\r\n\t\tend\r\n\tend\r\n\t\r\n\t-- Initialisation\r\n\tmainMenu() -- Open menu\r\nend\r\n\r\n-- Get Setting --\r\n-----------------\r\n\r\nfunction getSetting(var)\r\n\tif type(var) == \"table\" then -- Likely another object making the call\r\n\t\tvar = var.index or var.id or var.setting or var[1]\r\n\tend\r\n\tif not (var and type(var) == \"string\") then return end\r\n\t\r\n\treturn Settings[var]\r\nend\r\n\r\n\r\n-- Menus --\r\n-----------\r\n\r\nfunction mainMenu()\r\n\tListReference = Menu\r\n\tListData = {}\r\n\t\r\n\tDirectoryPath = {}\r\n\t\r\n\tdoListData()\r\n\t\r\n\tdoMenu(1)\r\nend\r\n\r\nfunction doListData()\r\n\tfor k in pairs(ListReference) do\r\n\t\ttable.insert(ListData, k)\r\n\tend\r\nend\r\n\r\nfunction getSettingType(settingData)\r\n\tlocal settingType = settingData.Type\r\n\tif not settingType then\r\n\t\tlocal defType = type(settingData.Default)\r\n\t\t\r\n\t\tif defType == \"boolean\" or defType == \"string\" then\r\n\t\t\tsettingType = defType\r\n\t\telseif defType == \"number\" then\r\n\t\t\tsettingType = \"float\"\r\n\t\tend\r\n\tend\r\n\t\r\n\treturn settingType\r\nend\r\n\r\nfunction doMenu(page)\r\n\tself.clearButtons()\r\n\tself.clearInputs()\r\n\t\r\n\tListPage = page or 1\r\n\t\r\n\t-- Title\r\n\tself.createButton({\r\n\t\tlabel=ListTitle,\r\n\t\tclick_function=\"doNull\",\r\n\t\tfunction_owner=self,\r\n\t\tscale = {0.5, 0.5, 0.5},\r\n\t\tposition={0, 0.1, -1.45},\r\n\t\trotation={0, 0, 0},\r\n\t\twidth=0,\r\n\t\theight=0,\r\n\t\tfont_size=230,\r\n\t\tfont_color = {r=1,g=1,b=1},\r\n\t})\r\n\t\r\n\tTargets = {}\r\n\t\r\n\tlocal displayFrom = (ListPage - 1) * ItemsPerPage\r\n\r\n\t-- List Page\r\n\tfor i = 1, ItemsPerPage do\r\n\t\tlocal data = ListData[displayFrom + i]\r\n\t\t\r\n\t\tif not (data and ListReference[data]) then break end\r\n\t\t\r\n\t\tlocal zpos = -1.37 + (i * 0.25)\r\n\t\tlocal col = AdminMode and {r=1,g=0.1,b=0.1} or {r=1,b=1,g=1}\r\n\t\t\r\n\t\t-- Button\r\n\t\tlocal refData = ListReference[data]\r\n\t\tif refData and refData.SettingName then\r\n\t\t\tlocal settingType = getSettingType( refData )\r\n\t\t\t\r\n\t\t\tif (not settingType) or settingType == \"boolean\" then\r\n\t\t\t\tself.createButton({\r\n\t\t\t\t\tlabel= (\"[505050]%s:[-] [b]%s[b]\"):format(tostring(refData.Label or refData.SettingName), Settings[refData.SettingName] and \"[00AA00]true[-]\" or \"[AA0000]false[-]\"), click_function=\"doAction\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\tposition={0, 0.1, zpos}, rotation={0, 0, 0}, width=2800, height=250, font_size=120,\r\n\t\t\t\t\tcolor = col, tooltip = refData.Tooltip,\r\n\t\t\t\t})\r\n\t\t\telseif settingType == \"int\" or settingType == \"float\" then -- Number entry\r\n\t\t\t\t-- Label\r\n\t\t\t\tself.createButton({\r\n\t\t\t\t\tlabel= (\"%s:\"):format(tostring(refData.Label or refData.SettingName)), click_function=\"doNull\", function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\tposition={-0.5, 0.1, zpos}, rotation={0, 0, 0}, width=0, height=0, font_size=80,\r\n\t\t\t\t\tfont_color = col, tooltip = refData.Tooltip,\r\n\t\t\t\t})\r\n\t\t\t\t\r\n\t\t\t\t-- Input\r\n\t\t\t\tself.createInput({\r\n\t\t\t\t\tlabel=tostring(refData.Label or refData.SettingName), input_function=\"doInput\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\tposition={0.5, 0.1, zpos}, rotation={0, 0, 0}, width=750, height=200, font_size=120,\r\n\t\t\t\t\tvalidation = settingType==\"float\" and 3 or 2, alignment = 3, value = tostring(Settings[refData.SettingName]), -- Validation depends on type\r\n\t\t\t\t\tcolor = col, tooltip = refData.Tooltip,\r\n\t\t\t\t})\r\n\t\t\t\t\r\n\t\t\t\t-- Step Up/Down\r\n\t\t\t\tif UseBigSteppers then\r\n\t\t\t\t\tself.createButton({ -- Up\r\n\t\t\t\t\t\tlabel= (\"^\"):format(tostring(refData.Label or refData.SettingName)), click_function=\"doInputUp\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\t\tposition={0.99, 0.1, zpos}, rotation={0, 0, 0}, width=200, height=200, font_size=120,\r\n\t\t\t\t\t\tcolor = col, tooltip = refData.Tooltip,\r\n\t\t\t\t\t})\r\n\t\t\t\t\tself.createButton({ -- Down\r\n\t\t\t\t\t\tlabel= (\"^\"):format(tostring(refData.Label or refData.SettingName)), click_function=\"doInputDown\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\t\tposition={1.19, 0.1, zpos}, rotation={0, 180, 0}, width=200, height=200, font_size=120,\r\n\t\t\t\t\t\tcolor = col, tooltip = refData.Tooltip,\r\n\t\t\t\t\t})\r\n\t\t\t\telse\r\n\t\t\t\t\tself.createButton({ -- Up\r\n\t\t\t\t\t\tlabel= (\"^\"):format(tostring(refData.Label or refData.SettingName)), click_function=\"doInputUp\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\t\tposition={0.95, 0.1, zpos-0.06}, rotation={0, 0, 0}, width=100, height=90, font_size=80,\r\n\t\t\t\t\t\tcolor = col, tooltip = refData.Tooltip,\r\n\t\t\t\t\t})\r\n\t\t\t\t\tself.createButton({ -- Down\r\n\t\t\t\t\t\tlabel= (\"^\"):format(tostring(refData.Label or refData.SettingName)), click_function=\"doInputDown\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\t\tposition={0.95, 0.1, zpos+0.06}, rotation={0, 180, 0}, width=100, height=90, font_size=80,\r\n\t\t\t\t\t\tcolor = col, tooltip = refData.Tooltip,\r\n\t\t\t\t\t})\r\n\t\t\t\tend\r\n\t\t\telseif settingType == \"string\" then\r\n\t\t\t\t-- Label\r\n\t\t\t\tself.createButton({\r\n\t\t\t\t\tlabel= (\"%s:\"):format(tostring(refData.Label or refData.SettingName)), click_function=\"doNull\", function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\tposition={-1, 0.1, zpos}, rotation={0, 0, 0}, width=0, height=0, font_size=80,\r\n\t\t\t\t\tfont_color = col, tooltip = refData.Tooltip,\r\n\t\t\t\t})\r\n\t\t\t\t\r\n\t\t\t\t-- Input\r\n\t\t\t\tself.createInput({\r\n\t\t\t\t\tlabel=tostring(refData.Label or refData.SettingName), input_function=\"doInput\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\tposition={0.35, 0.1, zpos}, rotation={0, 0, 0}, width=1900, height=200, font_size=100,\r\n\t\t\t\t\tvalidation = 1, alignment = 3, value = tostring(Settings[refData.SettingName]),\r\n\t\t\t\t\tcolor = col, tooltip = refData.Tooltip,\r\n\t\t\t\t})\r\n\t\t\telse -- Unrecognised type, probably an action button\r\n\t\t\t\tself.createButton({\r\n\t\t\t\t\tlabel= (\"%s\"):format(tostring(refData.Label or refData.SettingName)), click_function=\"doAction\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\t\tposition={0, 0.1, zpos}, rotation={0, 0, 0}, width=2800, height=250, font_size=120,\r\n\t\t\t\t\tcolor = col, tooltip = refData.Tooltip,\r\n\t\t\t\t})\r\n\t\t\tend\r\n\t\telse\r\n\t\t\tself.createButton({\r\n\t\t\t\tlabel= (\"[b]%s[b] >\"):format(tostring(data)), click_function=\"doAction\"..i, function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\t\t\tposition={0, 0.1, zpos}, rotation={0, 0, 0}, width=2800, height=250, font_size=120,\r\n\t\t\t\tcolor = col\r\n\t\t\t})\r\n\t\tend\r\n\tend\r\n\t\r\n\tlocal zposButton = -1.37 + (ItemsPerPage * 0.25) + 0.25\r\n\t\r\n\t-- Page Navigaton\r\n\tlocal pageStr = (\"Page %i of %i\"):format( ListPage, math.ceil(#ListData / ItemsPerPage) )\r\n\tself.createButton({\r\n\t\tlabel=pageStr, click_function=\"doNull\", function_owner=self, scale = {0.5, 0.5, 0.5},\r\n\t\tposition={0, 0.1, zposButton}, rotation={0, 0, 0}, width=0, height=0, font_size=100,\r\n\t\tfont_color = {r=1,g=1,b=1},\r\n\t})\r\n\t\r\n\tself.createButton({\r\n\t\tlabel=\"<\", click_function=\"PrevPage\", function_owner=self, scale = {1, 1, 1}, scale = {0.5, 0.5, 0.5},\r\n\t\tposition={-0.5, 0.1, zposButton}, rotation={0, 0, 0}, width=180, height=180, font_size=120,\r\n\t\tcolor = ListPage==1 and {0.5, 0.5, 0.5} or {1, 1, 1}\r\n\t})\r\n\tself.createButton({\r\n\t\tlabel=\">\", click_function=\"NextPage\", function_owner=self, scale = {1, 1, 1}, scale = {0.5, 0.5, 0.5},\r\n\t\tposition={0.5, 0.1, zposButton}, rotation={0, 0, 0}, width=180, height=180, font_size=120,\r\n\t\tcolor = ListPage>=math.ceil(#ListData / ItemsPerPage) and {0.5, 0.5, 0.5} or {1, 1, 1}\r\n\t})\r\n\t\r\n\t\r\n\tif #DirectoryPath > 0 then\r\n\t\t-- Return\r\n\t\tself.createButton({\r\n\t\t\tlabel=Lang.Back, click_function=\"clickBack\", function_owner=self, scale = {1, 1, 1}, scale = {0.5, 0.5, 0.5},\r\n\t\t\tposition={0.2, 0.1, 1.7}, rotation={0, 0, 0}, width=750, height=200, font_size=120,\r\n\t\t})\r\n\t\tself.createButton({\r\n\t\t\tlabel=Lang.Menu, click_function=\"clickMainMenu\", function_owner=self, scale = {1, 1, 1}, scale = {0.5, 0.5, 0.5},\r\n\t\t\tposition={1.0, 0.1, 1.7}, rotation={0, 0, 0}, width=750, height=200, font_size=120,\r\n\t\t})\r\n\tend\r\nend\r\n\r\nfunction NextPage(o, c)\r\n\tif not (c and Player[c].admin) then\r\n\t\tbroadcastToColor(Lang.NoPermission, c, {1, 0.2, 0.2})\r\n\t\treturn\r\n\tend\r\n\t\r\n\tlocal maxPage = math.max(math.ceil(#ListData / ItemsPerPage), 1)\r\n\tdoMenu(math.min(ListPage + 1, maxPage))\r\nend\r\n\r\nfunction PrevPage(o, c)\r\n\tif not (c and Player[c].admin) then\r\n\t\tbroadcastToColor(Lang.NoPermission, c, {1, 0.2, 0.2})\r\n\t\treturn\r\n\tend\r\n\t\r\n\tdoMenu(math.max(ListPage-1, 1))\r\nend\r\n\r\nfunction clickMainMenu(o,c)\r\n\tif not (c and Player[c].admin) then\r\n\t\tbroadcastToColor(Lang.NoPermission, c, {1, 0.2, 0.2})\r\n\t\treturn\r\n\tend\r\n\t\r\n\tmainMenu()\r\nend\r\n\r\nfunction clickBack(o,c)\r\n\tif not (c and Player[c].admin) then\r\n\t\tbroadcastToColor(Lang.NoPermission, c, {1, 0.2, 0.2})\r\n\t\treturn\r\n\tend\r\n\t\r\n\ttable.remove(DirectoryPath)\r\n\tif #DirectoryPath == 0 then\r\n\t\tmainMenu()\r\n\t\treturn\r\n\tend\r\n\t\r\n\tlocal workingDir = TradeItems\r\n\tfor i = 1, #DirectoryPath do\r\n\t\tlocal newDir = workingDir[DirectoryPath[i]]\r\n\t\tif newDir and not newDir.IsTraderItem then\r\n\t\t\tworkingDir = newDir\r\n\t\telse\r\n\t\t\twhile #DirectoryPath >= i do\r\n\t\t\t\ttable.remove(DirectoryPath)\r\n\t\t\tend\r\n\t\t\tbreak\r\n\t\tend\r\n\tend\r\n\tif #DirectoryPath == 0 then\r\n\t\tmainMenu()\r\n\t\treturn\r\n\tend\r\n\t\r\n\tListReference = workingDir\r\n\tListPage = 0\r\n\tListTitle = DirectoryPath[#DirectoryPath]\r\n\tListData = {}\r\n\t\r\n\tdoListData()\r\n\t\r\n\tdoMenu(1)\r\nend\r\n\r\n-- Actions --\r\n-------------\r\nfunction doAction(index, c)\r\n\tif not (c and Player[c].admin) then\r\n\t\tbroadcastToColor(Lang.NoPermission, c, {1, 0.2, 0.2})\r\n\t\treturn\r\n\tend\r\n\t\r\n\tlocal trueIndex = index + (ListPage-1) * ItemsPerPage\r\n\tlocal data = ListData[trueIndex]\r\n\tlocal ref = data and ListReference[data]\r\n\t\r\n\tif not ref then\r\n\t\tbroadcastToColor(Lang.NoButtonRef, c, {1, 0.2, 0.2})\r\n\t\tmainMenu()\r\n\t\treturn\r\n\tend\r\n\t\r\n\tif ref.SettingName then\r\n\t\tlocal settingType = getSettingType( ref )\r\n\t\tif (not settingType) or settingType == \"boolean\" then\r\n\t\t\tlocal old = Settings[ref.SettingName]\r\n\t\t\tSettings[ref.SettingName] = not old\r\n\t\tend\r\n\t\tif ref.OnSet then\r\n\t\t\tref.OnSet(Settings[ref.SettingName], old)\r\n\t\tend\r\n\t\t\r\n\t\tdoMenu(ListPage)\r\n\t\treturn\r\n\tend\r\n\t\r\n\ttable.insert(DirectoryPath, data)\r\n\tListReference = ref\r\n\tListPage = 0\r\n\tListTitle = data\r\n\tListData = {}\r\n\t\r\n\tdoListData()\r\n\t\r\n\tdoMenu(1)\r\nend\r\nfor i = 1, ItemsPerPage do\r\n\t_G[\"doAction\"..i] = function(o, c) return doAction(i, c) end\r\nend\r\n\r\nfunction doInput(index, c, value, isSelected)\r\n\tif isSelected then return end\r\n\t\r\n\tif not (c and Player[c].admin) then\r\n\t\tbroadcastToColor(Lang.NoPermission, c, {1, 0.2, 0.2})\r\n\t\t\r\n\t\tdoMenu(ListPage)\r\n\t\t\r\n\t\treturn\r\n\tend\r\n\t\r\n\tlocal trueIndex = index + (ListPage-1)*ItemsPerPage\r\n\tlocal data = ListData[trueIndex]\r\n\tlocal ref = data and ListReference[data]\r\n\t\r\n\tif not (ref and ref.SettingName) then\r\n\t\tbroadcastToColor(Lang.NoButtonRef, c, {1, 0.2, 0.2})\r\n\t\tmainMenu()\r\n\t\treturn\r\n\tend\r\n\t\r\n\tlocal old = Settings[ref.SettingName]\r\n\tlocal settingType = getSettingType( ref )\r\n\tif settingType == \"int\" or settingType == \"float\" then\r\n\t\tSettings[ref.SettingName] = tonumber(value) or 0\r\n\telseif settingType == \"string\" then\r\n\t\tSettings[ref.SettingName] = tostring(value)\r\n\tend\r\n\t\r\n\tif ref.OnSet then\r\n\t\tref.OnSet(Settings[ref.SettingName], old)\r\n\tend\r\n\t\r\n\treturn\r\nend\r\nfor i = 1, ItemsPerPage do\r\n\t_G[\"doInput\"..i] = function(o, c, str, sel) return doInput(i, c, str, sel) end\r\nend\r\n\r\nfunction doInputUp(index, c, addValue)\r\n\tif not (c and Player[c].admin) then\r\n\t\tbroadcastToColor(Lang.NoPermission, c, {1, 0.2, 0.2})\r\n\t\treturn\r\n\tend\r\n\t\r\n\tlocal trueIndex = index + (ListPage - 1) * ItemsPerPage\r\n\tlocal data = ListData[trueIndex]\r\n\tlocal ref = data and ListReference[data]\r\n\t\r\n\tif not (ref and ref.SettingName) then\r\n\t\tbroadcastToColor(Lang.NoButtonRef, c, {1, 0.2, 0.2})\r\n\t\tmainMenu()\r\n\t\treturn\r\n\tend\r\n\t\r\n\tlocal old = Settings[ref.SettingName]\r\n\tSettings[ref.SettingName] = (tonumber(old) or 0) + (addValue or  1)\r\n\t\r\n\tif ref.OnSet then\r\n\t\tref.OnSet(Settings[ref.SettingName], old)\r\n\tend\r\n\t\r\n\tdoMenu(ListPage)\r\nend\r\nfor i = 1, ItemsPerPage do\r\n\t_G[\"doInputUp\"..i] = function(o, c) return doInputUp(i, c) end\r\nend\r\n\r\nfunction doInputDown(index, c)\r\n\treturn doInputUp(index, c, -1)\r\nend\r\nfor i = 1, ItemsPerPage do\r\n\t_G[\"doInputDown\"..i] = function(o, c) return doInputDown(i, c) end\r\nend",
+      "LuaScriptState": "{\"Menu1.BooleanExample\":true,\"Menu1.FloatExample\":1,\"Menu1.IntExample\":1,\"Menu1.StringExample\":\"string\"}",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "9ba7fe",
+      "Name": "Notecard",
+      "Transform": {
+        "posX": 0.0276380219,
+        "posY": 1.03,
+        "posZ": 5.42581034,
+        "rotX": -3.66821723E-07,
+        "rotY": 1.98731977E-05,
+        "rotZ": 8.704525E-07,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Getting Started",
+      "Description": "Global.lua has an example of how to access the settings.\n\nSettings token is self contained so the object can be copied into another save and edited.\n\nBy default the script attached to the token has all example types",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    }
+  ]
+}
