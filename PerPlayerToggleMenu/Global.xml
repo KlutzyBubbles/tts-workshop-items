@@ -1,0 +1,38 @@
+<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->
+
+<Defaults>
+    <Button color="white" textColor="black" />
+</Defaults>
+
+<Panel
+  height="152"
+  width="202"
+  allowDragging="true"
+  returnToOriginalPositionWhenReleased="false"
+  rectAlignment="UpperLeft"
+  offsetXY="100 -100"
+  >
+    <Button
+      rectAlignment="UpperCenter"
+      id="buttonsLayout"
+      text="Buttons"
+      color="blue"
+      textColor="white"
+      height="50"
+      >
+    </Button>
+    
+    <GridLayout
+      id="buttonsGrid"
+      rectAlignment="LowerCenter"
+      padding="0 0 0 0"
+      spacing="2 2"
+      height="102"
+      cellsize="100 50"
+      childAlignment="UpperRight">
+      <Button id="one" class="button" onClick="clickButton" text="1"></Button>
+      <Button id="two" class="button" onClick="clickButton" text="2"></Button>
+      <Button id="three" class="button" onClick="clickButton" text="3"></Button>
+      <Button id="four" class="button" onClick="clickButton" text="4"></Button>
+    </GridLayout>
+</Panel>
