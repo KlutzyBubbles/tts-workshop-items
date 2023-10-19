@@ -13,3 +13,9 @@ There are many reasons
 - I am able to update any mistakes with textures or objects without updating the workshop item (which is a manual and hard to track process)
 - Change tracking on git is just better.
 
+
+## Need / want something changed?
+
+Feel free to submit an issue or add me on steam (https://steamcommunity.com/id/KlutzyBubbles) or discord (@KlutzyBubbles)
+
+I am always interested in adding different themes / features to more workshop items.
