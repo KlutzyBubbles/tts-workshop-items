@@ -1,0 +1,13 @@
+<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->
+
+<Button
+    onClick="resetClick"
+    icon="reset"
+    iconWidth="50"
+    width="56"
+    height="56"
+    rectAlignment="UpperLeft"
+    visibility="host"
+    offsetXY="150 -5"
+    padding="3 3 3 3"
+></Button>
